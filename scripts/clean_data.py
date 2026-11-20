@@ -1,6 +1,3 @@
-"""Remove stray whitespace from data/census.csv (column names unchanged)."""
-from pathlib import Path
-
 import pandas as pd
 
 DATA = "data/census.csv"
