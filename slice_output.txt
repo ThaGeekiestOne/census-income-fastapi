@@ -1,0 +1,125 @@
+=== Slices for: workclass ===
+  feature            value    n  precision  recall     f1
+workclass                ?  363     0.6923  0.5000 0.5806
+workclass      Federal-gov  195     0.7031  0.5921 0.6429
+workclass        Local-gov  389     0.7767  0.6667 0.7175
+workclass     Never-worked    1     1.0000  1.0000 1.0000
+workclass          Private 4597     0.7952  0.5966 0.6818
+workclass     Self-emp-inc  222     0.7656  0.8305 0.7967
+workclass Self-emp-not-inc  500     0.8304  0.6503 0.7294
+workclass        State-gov  245     0.7385  0.7273 0.7328
+workclass      Without-pay    1     1.0000  1.0000 1.0000
+
+=== Slices for: education ===
+  feature        value    n  precision  recall     f1
+education         10th  204     1.0000  0.2000 0.3333
+education         11th  244     1.0000  0.2727 0.4286
+education         12th   79     1.0000  0.2500 0.4000
+education      1st-4th   28     1.0000  0.5000 0.6667
+education      5th-6th   51     1.0000  1.0000 1.0000
+education      7th-8th  120     1.0000  0.0000 0.0000
+education          9th  106     1.0000  0.1429 0.2500
+education   Assoc-acdm  191     0.9444  0.6182 0.7473
+education    Assoc-voc  274     0.8200  0.4824 0.6074
+education    Bachelors 1096     0.7480  0.8421 0.7922
+education    Doctorate   84     0.8889  0.8889 0.8889
+education      HS-grad 2120     0.7891  0.2979 0.4325
+education      Masters  318     0.8454  0.9011 0.8723
+education    Preschool    9     1.0000  1.0000 1.0000
+education  Prof-school  114     0.8041  0.9398 0.8667
+education Some-college 1475     0.7151  0.4750 0.5708
+
+=== Slices for: marital-status ===
+       feature                 value    n  precision  recall     f1
+marital-status              Divorced  883     0.9355  0.2816 0.4328
+marital-status     Married-AF-spouse    5     1.0000  0.0000 0.0000
+marital-status    Married-civ-spouse 2977     0.7731  0.6808 0.7240
+marital-status Married-spouse-absent   86     1.0000  0.2000 0.3333
+marital-status         Never-married 2181     0.9688  0.3483 0.5124
+marital-status             Separated  199     1.0000  0.3750 0.5455
+marital-status               Widowed  182     1.0000  0.3636 0.5333
+
+=== Slices for: occupation ===
+   feature             value   n  precision  recall     f1
+occupation                 ? 364     0.6923  0.5000 0.5806
+occupation      Adm-clerical 819     0.7089  0.4553 0.5545
+occupation      Armed-Forces   3     1.0000  1.0000 1.0000
+occupation      Craft-repair 800     0.7229  0.3261 0.4494
+occupation   Exec-managerial 808     0.8092  0.8133 0.8112
+occupation   Farming-fishing 203     0.7692  0.4762 0.5882
+occupation Handlers-cleaners 252     0.5714  0.3333 0.4211
+occupation Machine-op-inspct 392     0.9375  0.2885 0.4412
+occupation     Other-service 684     1.0000  0.1667 0.2857
+occupation   Priv-house-serv  20     1.0000  1.0000 1.0000
+occupation    Prof-specialty 818     0.8016  0.8528 0.8264
+occupation   Protective-serv 121     0.7500  0.5714 0.6486
+occupation             Sales 718     0.7742  0.5882 0.6685
+occupation      Tech-support 189     0.7447  0.6140 0.6731
+occupation  Transport-moving 322     0.7500  0.1967 0.3117
+
+=== Slices for: relationship ===
+     feature          value    n  precision  recall     f1
+relationship        Husband 2607     0.7652  0.6760 0.7178
+relationship  Not-in-family 1636     0.9455  0.3152 0.4727
+relationship Other-relative  190     1.0000  0.3333 0.5000
+relationship      Own-child 1032     1.0000  0.2667 0.4211
+relationship      Unmarried  712     1.0000  0.3023 0.4643
+relationship           Wife  336     0.8298  0.7312 0.7774
+
+=== Slices for: race ===
+feature              value    n  precision  recall     f1
+   race Amer-Indian-Eskimo   73     0.7500  0.3333 0.4615
+   race Asian-Pac-Islander  200     0.6667  0.6538 0.6602
+   race              Black  662     0.8065  0.5376 0.6452
+   race              Other   45     1.0000  1.0000 1.0000
+   race              White 5533     0.7875  0.6333 0.7020
+
+=== Slices for: sex ===
+feature  value    n  precision  recall     f1
+    sex Female 2158     0.8529  0.5918 0.6988
+    sex   Male 4355     0.7733  0.6342 0.6968
+
+=== Slices for: native-country ===
+       feature                      value    n  precision  recall     f1
+native-country                          ?  125     0.7297  0.8438 0.7826
+native-country                   Cambodia    3     1.0000  1.0000 1.0000
+native-country                     Canada   28     0.2500  0.2000 0.2222
+native-country                      China   14     0.7500  0.7500 0.7500
+native-country                   Columbia   11     0.0000  1.0000 0.0000
+native-country                       Cuba   12     1.0000  0.5000 0.6667
+native-country         Dominican-Republic   12     1.0000  1.0000 1.0000
+native-country                    Ecuador    3     1.0000  0.0000 0.0000
+native-country                El-Salvador   21     1.0000  1.0000 1.0000
+native-country                    England   22     0.7500  0.4286 0.5455
+native-country                     France    2     0.0000  1.0000 0.0000
+native-country                    Germany   28     0.6667  0.5714 0.6154
+native-country                     Greece    4     1.0000  1.0000 1.0000
+native-country                  Guatemala   21     1.0000  0.5000 0.6667
+native-country                      Haiti    8     1.0000  1.0000 1.0000
+native-country                   Honduras    3     1.0000  1.0000 1.0000
+native-country                       Hong    3     1.0000  1.0000 1.0000
+native-country                    Hungary    2     1.0000  0.0000 0.0000
+native-country                      India   18     0.7000  1.0000 0.8235
+native-country                       Iran   12     0.2500  0.3333 0.2857
+native-country                    Ireland    2     1.0000  1.0000 1.0000
+native-country                      Italy   13     1.0000  0.6250 0.7692
+native-country                    Jamaica   21     1.0000  1.0000 1.0000
+native-country                      Japan   16     0.8000  0.5714 0.6667
+native-country                       Laos    2     1.0000  1.0000 1.0000
+native-country                     Mexico  111     1.0000  0.3333 0.5000
+native-country                  Nicaragua   11     0.0000  0.0000 0.0000
+native-country Outlying-US(Guam-USVI-etc)    4     1.0000  1.0000 1.0000
+native-country                       Peru    7     1.0000  1.0000 1.0000
+native-country                Philippines   41     0.6923  0.7500 0.7200
+native-country                     Poland   12     0.5000  1.0000 0.6667
+native-country                   Portugal    7     1.0000  0.0000 0.0000
+native-country                Puerto-Rico   22     0.7500  0.7500 0.7500
+native-country                   Scotland    4     1.0000  1.0000 1.0000
+native-country                      South   12     1.0000  0.3333 0.5000
+native-country                     Taiwan    7     0.7500  1.0000 0.8571
+native-country                   Thailand    7     1.0000  1.0000 1.0000
+native-country            Trinadad&Tobago    4     1.0000  1.0000 1.0000
+native-country              United-States 5835     0.7919  0.6255 0.6990
+native-country                    Vietnam   15     1.0000  0.0000 0.0000
+native-country                 Yugoslavia    8     1.0000  0.5000 0.6667
+

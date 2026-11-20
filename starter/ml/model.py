@@ -1,4 +1,11 @@
+from pathlib import Path
+
+import joblib
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score, precision_score, recall_score
+
+from starter.ml.data import process_data
 
 
 def train_model(X_train, y_train):
@@ -16,7 +23,11 @@ def train_model(X_train, y_train):
     model : RandomForestClassifier
         Trained machine learning model.
     """
-    pass
+    model = RandomForestClassifier(
+        n_estimators=100, min_samples_leaf=3, random_state=42, n_jobs=-1
+    )
+    model.fit(X_train, y_train)
+    return model
 
 
 def compute_model_metrics(y, preds):
@@ -56,4 +67,42 @@ def inference(model, X):
     preds : np.ndarray
         Predictions from the model.
     """
-    pass
+    return model.predict(X)
+
+
+def save_artifact(obj, path):
+    """Save a model, encoder or label binarizer to disk."""
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(obj, path, compress=3)
+
+
+def load_artifact(path):
+    """Load a saved model, encoder or label binarizer."""
+    return joblib.load(path)
+
+
+def compute_slice_metrics(df, feature, model, encoder, lb,
+                          cat_features, label="salary"):
+    """Compute metrics for each unique value of `feature`, held fixed.
+
+    Returns
+    -------
+    pd.DataFrame
+        One row per unique value with count, precision, recall and F1.
+    """
+    rows = []
+    for value in sorted(df[feature].unique()):
+        part = df[df[feature] == value]
+        X, y, _, _ = process_data(
+            part, categorical_features=cat_features, label=label,
+            training=False, encoder=encoder, lb=lb,
+        )
+        precision, recall, fbeta = compute_model_metrics(
+            y, inference(model, X))
+        rows.append({
+            "feature": feature, "value": value, "n": len(part),
+            "precision": round(precision, 4),
+            "recall": round(recall, 4),
+            "f1": round(fbeta, 4),
+        })
+    return pd.DataFrame(rows)
