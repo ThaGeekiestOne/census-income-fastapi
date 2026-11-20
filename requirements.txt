@@ -22,6 +22,7 @@ numpy==2.3.3
 matplotlib==3.10.6
 seaborn==0.13.2
 scikit-learn==1.7.2
+joblib
 
 # Jupyter support
 jupyter==1.1.1
@@ -39,3 +40,9 @@ Flask-Bootstrap==3.3.7.1
 # Other utilities
 python-multipart==0.0.20
 httplib2==0.31.0
+
+
+
+# Testing and linting
+pytest==8.4.2
+flake8
